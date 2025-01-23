@@ -2,22 +2,38 @@
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .global-div {
-max-width: 500px;
+    margin: 150px;
+    padding: 50px;
+    width: 500px;
+    height: 450px;
+    border: 1px solid rgb(82, 82, 214);
+    border-radius: 15px;
+    position: relative;
+}
+
+.input-area {
+    position: absolute;
+    top: 20px;
+    left: 130px;
 }
 
 input {
-    padding: 15px 10px;
+    padding: 15px 20px;
     border-radius: 15px;
     border: 1px solid rgb(82, 82, 214);
+    font-size: 1rem;
 }
 
 button {
@@ -34,4 +50,71 @@ button:hover {
     background-color: white;
     color: rgb(82, 82, 214);
     border: 1px solid rgb(82, 82, 214);
+}
+
+.upper-div, .sun-div, .more-info-div {
+    font-size: 1.4rem;
+}
+
+.upper-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.temp-div {
+    font-size: 2.5rem;
+}
+
+.sun-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.sun-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.more-info-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.city-night-style {
+    color: white;
+    background-color: rgb(2, 2, 73);
+}
+
+.body-night-style {
+    color: white;
+    background-color: rgb(2, 2, 31);
+}
+
+.city-day-style {
+    color: white;
+    background-color: rgba(48, 48, 236, 0.808);
+}
+
+.body-day-style {
+    color: white;
+    background-color: rgb(149, 149, 246);
+}
+
+.upper-div img {
+    max-width: 150px;
+}
+
+.more-info-div img, .sun-div img {
+    max-width: 40px;
 }
