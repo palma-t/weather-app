@@ -16,7 +16,7 @@ async function getInformation (city) {
         const cityData = await response.json();
         console.log(cityData);
         const cityInformation = {
-            location: cityData.address,
+            location: cityData.resolvedAddress,
             temperature: cityData.currentConditions.temp,
             conditions: cityData.currentConditions.conditions,
             humidity: cityData.currentConditions.humidity,
@@ -25,6 +25,7 @@ async function getInformation (city) {
             sunseTime: cityData.currentConditions.sunset,
             wind: cityData.currentConditions.windspeed,
             time: cityData.currentConditions.datetime,
+            icon: cityData.currentConditions.icon
         };
         console.log({cityInformation});
         return cityInformation;
@@ -38,6 +39,7 @@ function styleItAll (city) {
     const globalDiv = document.querySelector(".global-div");
 
     const citySquare = document.querySelector("#answers");
+    citySquare.innerHTML = "";
     citySquare.classList.add("city-square");
 
     const upperDiv = document.createElement("div");
@@ -58,8 +60,7 @@ function styleItAll (city) {
     cityDiv.appendChild(conditionsDiv);
 
     const cloudDiv = document.createElement("img");
-    cloudDiv.src = "./images/weather-cloudy.svg";
-    //if pour img en fonction du temps
+    cloudDiv.src = `./images/weather-icons/${city.icon}.svg`;
 
     upperDiv.appendChild(cityDiv);
     upperDiv.appendChild(cloudDiv);
@@ -126,7 +127,6 @@ function styleItAll (city) {
     citySquare.appendChild(sunDiv);
     citySquare.appendChild(moreInfoDiv);
 
-    /* fonctionne pas
     if(city.time > city.sunriseTime && city.time < city.sunseTime) {
         body.classList.add("body-day-style");
         globalDiv.classList.add("city-day-style");
@@ -134,10 +134,13 @@ function styleItAll (city) {
         body.classList.add("body-night-style");
         globalDiv.classList.add("city-night-style");  
     }
-        */
+        
 }
 
 async function makeItHappen () {
     const askedCity = await getInformation(getInput());
    styleItAll(askedCity);
 }
+
+//to do
+// night style and logic

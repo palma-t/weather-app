@@ -39,7 +39,7 @@ input {
 button {
     font-family: inherit;
     padding: 15px 10px;
-    border: 1px solid white;
+    border: 1px solid rgb(82, 82, 214);
     border-radius: 15px;
     background-color: rgb(82, 82, 214);
     color: white;
@@ -60,13 +60,13 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
     gap: 20px;
 }
 
 .temp-div {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .sun-div {
@@ -103,12 +103,13 @@ button:hover {
 
 .city-day-style {
     color: white;
-    background-color: rgba(48, 48, 236, 0.808);
+    background-color: rgba(84, 84, 234, 0.808);
+    box-shadow: 3px 5px 5px grey;
 }
 
 .body-day-style {
     color: white;
-    background-color: rgb(149, 149, 246);
+    background-color: lightblue;
 }
 
 .upper-div img {
