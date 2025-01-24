@@ -117,5 +117,5 @@ button:hover {
 }
 
 .more-info-div img, .sun-div img {
-    max-width: 40px;
+    width: 40px;
 }

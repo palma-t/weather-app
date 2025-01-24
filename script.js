@@ -127,7 +127,8 @@ function styleItAll (city) {
     citySquare.appendChild(sunDiv);
     citySquare.appendChild(moreInfoDiv);
 
-    if(city.time > city.sunriseTime && city.time < city.sunseTime) {
+    if((city.time > city.sunriseTime) && (city.time < city.sunseTime)) {
+        console.log("day style");
         body.classList.add("body-day-style");
         globalDiv.classList.add("city-day-style");
     } else {
@@ -142,5 +143,3 @@ async function makeItHappen () {
    styleItAll(askedCity);
 }
 
-//to do
-// night style and logic
