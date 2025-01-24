@@ -102,6 +102,7 @@ function styleItAll (city) {
     humidityText.textContent = city.humidity;
     humidityDiv.appendChild(humidityImg);
     humidityDiv.appendChild(humidityText);
+    humidityDiv.classList.add("single-info-div");
 
     const precipDiv = document.createElement("div");    
     const precipImg = document.createElement("img");
@@ -110,6 +111,7 @@ function styleItAll (city) {
     precipText.textContent = city.precipitation;
     precipDiv.appendChild(precipImg);
     precipDiv.appendChild(precipText);
+    precipDiv.classList.add("single-info-div");
 
     const windDiv = document.createElement("div");
     const windImg = document.createElement("img");
@@ -118,6 +120,7 @@ function styleItAll (city) {
     windText.textContent = city.wind;
     windDiv.appendChild(windImg);
     windDiv.appendChild(windText);
+    windDiv.classList.add("single-info-div");
 
     moreInfoDiv.appendChild(humidityDiv);
     moreInfoDiv.appendChild(precipDiv);

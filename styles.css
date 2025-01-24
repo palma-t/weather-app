@@ -91,6 +91,12 @@ button:hover {
     gap: 10px;
 }
 
+.single-info-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .city-night-style {
     color: white;
     background-color: rgb(2, 2, 73);
